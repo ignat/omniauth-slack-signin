@@ -1,6 +1,6 @@
 # OmniAuth Slack SignIn
 
-This gem contains Slack SignIn strategy for OmniAuth. It works with minimum required 'identity.basic' scope. And then calls `/api/users.identity` to fetch `team_id`, `user_id`, `user_name`.
+This gem contains Slack SignIn strategy for OmniAuth. It works with minimum required `identity.basic` scope. And calls `/api/users.identity` to fetch `team_id`, `user_id`, `user_name`.
 
 ## Install
 
