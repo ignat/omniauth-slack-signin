@@ -16,6 +16,7 @@ module OmniAuth
       }
 
       uid do
+        puts callback_url
         "#{identity['team']['id']}-#{identity['user']['id']}"
       end
 
