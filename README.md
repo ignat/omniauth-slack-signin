@@ -1,6 +1,6 @@
 # OmniAuth Slack SignIn
 
-This gem contains Slack SignIn strategy for OmniAuth.
+This gem contains Slack SignIn strategy for OmniAuth. It works with minimum required 'identity.basic' scope. And then calls `/api/users.identity` to fetch `team_id`, `user_id`, `user_name`.
 
 ## Install
 
@@ -12,7 +12,7 @@ gem 'omniauth-slacksignin', github: 'ignat/omniauth-slacksignin'
 
 ## Setup
 
-Add the folowing code to your Devise initializer:
+Add the following code to your Devise initializer:
 
 ```ruby
 config.omniauth :slacksignin, ENV['SLACK_APP_ID'], ENV['SLACK_APP_SECRET'], scope: 'identity.basic'
@@ -33,6 +33,8 @@ def slacksignin
 end
 ```
 
+The login page will be available at the following path: `/users/auth/slacksignin`
+
 # OmniAuth Options
 
 You can pass OmniAuth options during initialization:
@@ -46,7 +48,7 @@ This will change the provider name to 'slack'.
 # Contributing
 
 1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
+2. Create your feature branch `git checkout -b my-new-feature`
+3. Commit your changes `git commit -m 'Add some feature'`
+4. Push to the branch `git push origin my-new-feature`
 5. Create new Pull Request
