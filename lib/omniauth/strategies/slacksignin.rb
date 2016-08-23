@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class SlackSignIn < OmniAuth::Strategies::OAuth2
 
-      option :name, "slack-signin"
+      option :name, "slacksignin"
       option :authorize_options, [:scope]
       option :client_options, {
         site: "https://slack.com",
@@ -41,4 +41,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization "slack-signin", "SlackSignIn"
+OmniAuth.config.add_camelization "slacksignin", "SlackSignIn"

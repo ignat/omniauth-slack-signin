@@ -1,1 +1,1 @@
-require 'omniauth/strategies/slack-signin'
+require 'omniauth/strategies/slacksignin'
